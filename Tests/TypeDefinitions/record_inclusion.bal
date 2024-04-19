@@ -31,9 +31,5 @@ type RecE record {
 };
 
 public function main() {
-    RecE recE = {
-        fieldB: 1,
-        fieldC: "hello",
-        fieldInt: 2
-    };
+    RecE recE;
 }
