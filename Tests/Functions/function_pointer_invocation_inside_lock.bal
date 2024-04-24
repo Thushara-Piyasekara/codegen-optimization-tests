@@ -14,22 +14,20 @@
 // specific language governing permissions and limitations
 // under the License.
 
-type RecA record {
-    B fieldB;
-    C fieldC;
-};
-
-type B boolean|int;
-
-type C string;
-
-type D decimal;
-
-type RecE record {
-    *RecA;
-    int fieldInt;
-};
-
 public function main() {
-    RecE recE = {fieldB: true, fieldC: "hello", fieldInt: 5};
+    className obj = new className();
+    obj.bar();
+}
+
+isolated class className {
+    isolated function foo() {
+    }
+
+    isolated function bar() {
+        isolated function () bar;
+        bar = self.foo;
+        lock {
+            bar();
+        }
+    }
 }

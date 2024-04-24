@@ -14,13 +14,20 @@
 // specific language governing permissions and limitations
 // under the License.
 
-type A int|string;
-
-type B boolean;
-
 public function main() {
-    int[] nums = [1, 2, 3, 4];
+    int val = 0;
+    match val {
+        0 => {
+            foo();
+        }
+        1 => {
 
-    int[] queryResult = from A i in nums
-        select i * 2;
+        }
+    }
+}
+
+function foo() {
+}
+
+function bar() {
 }

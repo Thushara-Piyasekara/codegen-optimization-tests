@@ -2,18 +2,19 @@
   ".": {
     "usedFunctionNames": {
       "sourceFunctions": [
-        "main"
+        "main",
+        "foo"
       ],
       "virtualFunctions": [
         ".<init>",
         ".<start>",
-        ".<stop>",
-        "$streamLambda$_0",
-        "$streamLambda$_1"
+        ".<stop>"
       ]
     },
     "unusedFunctionNames": {
-      "sourceFunctions": [],
+      "sourceFunctions": [
+        "bar"
+      ],
       "virtualFunctions": []
     },
     "usedTypeDefNames": {
@@ -21,10 +22,7 @@
       "virtualTypeDefinitions": []
     },
     "unusedTypeDefNames": {
-      "sourceTypeDefinitions": [
-        "A",
-        "B"
-      ],
+      "sourceTypeDefinitions": [],
       "virtualTypeDefinitions": []
     },
     "usedNativeClassPaths": []

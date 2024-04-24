@@ -14,22 +14,24 @@
 // specific language governing permissions and limitations
 // under the License.
 
-type RecA record {
-    B fieldB;
-    C fieldC;
-};
-
-type B boolean|int;
-
-type C string;
-
-type D decimal;
-
-type RecE record {
-    *RecA;
-    int fieldInt;
-};
-
 public function main() {
-    RecE recE = {fieldB: true, fieldC: "hello", fieldInt: 5};
+    int val = 0;
+    match val {
+        0 if baz() => {
+            foo();
+        }
+        1 => {
+
+        }
+    }
+}
+
+function foo() {
+}
+
+function bar() {
+}
+
+function baz() returns boolean {
+    return true;
 }

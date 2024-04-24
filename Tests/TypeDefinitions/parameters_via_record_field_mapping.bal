@@ -26,10 +26,14 @@ type C string;
 type D decimal;
 
 type RecE record {
-    *RecA;
     int fieldInt;
+    D fieldD;
+
 };
 
 public function main() {
-    RecE recE = {fieldB: true, fieldC: "hello", fieldInt: 5};
+    foo(fieldB = true, fieldC = "hello");
+}
+
+function foo(*RecA rec) {
 }
