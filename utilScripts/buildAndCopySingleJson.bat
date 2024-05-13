@@ -10,7 +10,7 @@ set fileNameWithExtention=%~nx1
 set filename=%fileNameWithExtention:~0,-4%
 
 cd TEMP_JAR_CACHE
-call %BALR% build --optimize %balFilePath%
+call %BALR% build --optimize --verbose %balFilePath%
 cd ../
 echo copying %filename%.json to json cache
 move /Y %source_file% %jsonCache%\%filename%.json

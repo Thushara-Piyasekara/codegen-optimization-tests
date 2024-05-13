@@ -10,14 +10,16 @@ set BALR=C:\Users\Ballerina_CodeBase\ballerina-lang\distribution\zip\jballerina-
 cd %parentDir%utilScripts\TEMP_JAR_CACHE
 
 for %%f in ("%FunctionTests%\*%balFileName%*") do (
-    call %BALR% build --optimize %%f
+    call %BALR% build --optimize --verbose %%f
     move /Y %FunctionTests%\codegen_optimization_report.json %ActualJSONsCache%\%%~nf.json
+    del /q /a-d %FunctionTests%\native_dependency_optimization_report.json
     start firefox %ActualJSONsCache%\%%~nf.json
 )
 
 for %%f in ("%TypeDefTests%\*%balFileName%*") do (
-    call %BALR% build --optimize %%f
+    call %BALR% build --optimize --verbose %%f
     move /Y %TypeDefTests%\codegen_optimization_report.json %ActualJSONsCache%\%%~nf.json
+    del /q /a-d %TypeDefTests%\native_dependency_optimization_report.json
     start firefox %ActualJSONsCache%\%%~nf.json
 )
 

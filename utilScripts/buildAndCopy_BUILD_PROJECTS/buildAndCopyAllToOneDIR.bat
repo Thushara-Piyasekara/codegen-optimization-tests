@@ -15,13 +15,3 @@ for /d %%f in ("%FunctionTests%\*") do (
 for /d %%f in ("%TypeDefTests%\*") do (
    call buildAndCopySingleJson.bat %%f %actualJsonCache%
 )
-
-rem echo %TEMP_JAR_CACHE%
-rem for /f "tokens=*" %%a in ('dir /b /s /a-d "%TEMP_JAR_CACHE%\*.jar"') do (
-rem     echo Deleting: "%%a"
-rem     del "%%a"
-rem )
-
-rem for %%f in ("%expectedJsonCache%\*json") do (
-rem     call compareJsons.bat %%f %actualJsonCache%
-rem )

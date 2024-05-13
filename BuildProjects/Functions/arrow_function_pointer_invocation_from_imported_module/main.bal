@@ -13,22 +13,8 @@
 // KIND, either express or implied. See the License for the
 // specific language governing permissions and limitations
 // under the License.
-
-type R record {
-    int x;
-    int y;
-};
-
-typedesc<record {}> t = R;
+import arrow_function_pointer_invocation_from_imported_module.subModule_1;
 
 public function main() {
-    any aaa = foo(t);
-    if aaa is R {
-        R rrr = aaa;
-    }
-}
-
-function foo(typedesc<anydata> typeDesc) returns any {
-    map<int> m = {x: 1, y: 2};
-    return checkpanic m.cloneWithType(typeDesc);
+    _ = subModule_1:globalArrow(22, 33);
 }
