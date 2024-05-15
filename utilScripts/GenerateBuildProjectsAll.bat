@@ -8,4 +8,3 @@ for %%T in ("%SINGLE_FILE_PROJECT_DIR_PATH%\*bal") do (
     cd %UTIL_DIR%
     call GenerateNewBuildProjectFromSingleFileProject.bat %%T
 )
-
